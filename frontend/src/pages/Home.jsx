@@ -34,7 +34,7 @@ function Home(){
 
     const createNote = (e) => {
         e.preventDefault()
-        api.post('/api/notes/a', {content,title}).then ((res) => {
+        api.post('/api/notes/', {content,title}).then ((res) => {
             if(res.status === 201) alert('note created!')
             else alert('failed to make note.')
             getNotes()
